@@ -25,6 +25,11 @@ app.get('/',async (req,res)=>{
 app.get("/about",(req,res)=>{
     res.render('about');
 })
+app.get("/posts/:id",async (req,res)=>{
+    let id = req.params.id;
+    const post = await Post.findById(id);
+    res.render('post',{post});
+})
 app.get('/add',(req,res)=>{
 
     res.render('add_post')
