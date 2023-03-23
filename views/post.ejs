@@ -23,6 +23,8 @@
     </div>
   </header>
 
+  <a href="/posts/edit/<%=post._id%>" class="btn btn-warning">Update</a>
+  <a class="btn btn-danger" href="/post/delete/<%= post._id%>?_method=DELETE" onclick="return confirm('Are you sure?')">Delete</a>
   <!-- Post Content -->
  
 
